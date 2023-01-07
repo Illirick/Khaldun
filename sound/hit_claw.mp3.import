@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hit_claw.mp3-2523df8ff45efdba66e006943e73f066.mp3str"
+
+[deps]
+
+source_file="res://sound/hit_claw.mp3"
+dest_files=[ "res://.import/hit_claw.mp3-2523df8ff45efdba66e006943e73f066.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

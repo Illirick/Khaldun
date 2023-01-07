@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://art/ghost/idle/ghost2.png" type="Texture" id=1]
+[ext_resource path="res://art/ghost/idle/ghost5.png" type="Texture" id=2]
+[ext_resource path="res://art/ghost/idle/ghost3.png" type="Texture" id=3]
+[ext_resource path="res://art/ghost/idle/ghost4.png" type="Texture" id=4]
+[ext_resource path="res://art/ghost/idle/ghost1.png" type="Texture" id=5]
+[ext_resource path="res://scripts/Ghost.gd" type="Script" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Ghost" type="KinematicBody2D" groups=["Enemy", "Ghost"]]
+script = ExtResource( 6 )
+speed = 110
+maximum_hp = 1
+
+[node name="FlyingTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="AttackCooldownTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="FlyingTimer" to="." method="_on_FlyingTimer_timeout"]

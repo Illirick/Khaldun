@@ -1,0 +1,40 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://art/cutscene/scene12.png" type="Texture" id=1]
+[ext_resource path="res://art/cutscene/scene1.png" type="Texture" id=2]
+[ext_resource path="res://art/cutscene/scene9.png" type="Texture" id=3]
+[ext_resource path="res://art/cutscene/scene11.png" type="Texture" id=4]
+[ext_resource path="res://art/cutscene/scene6.png" type="Texture" id=5]
+[ext_resource path="res://art/cutscene/scene7.png" type="Texture" id=6]
+[ext_resource path="res://art/cutscene/scene4.png" type="Texture" id=7]
+[ext_resource path="res://art/cutscene/scene8.png" type="Texture" id=8]
+[ext_resource path="res://art/cutscene/scene3.png" type="Texture" id=9]
+[ext_resource path="res://art/cutscene/scene2.png" type="Texture" id=10]
+[ext_resource path="res://art/cutscene/scene5.png" type="Texture" id=11]
+[ext_resource path="res://art/cutscene/scene10.png" type="Texture" id=12]
+[ext_resource path="res://scripts/Cutscene.gd" type="Script" id=13]
+[ext_resource path="res://sound/falling.mp3" type="AudioStream" id=14]
+[ext_resource path="res://sound/bluebird.mp3" type="AudioStream" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "default",
+"speed": 1.0
+} ]
+
+[node name="Cutscene" type="Node"]
+script = ExtResource( 13 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="FallingSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+
+[node name="BluebirdSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite" to="." method="_on_AnimatedSprite_frame_changed"]

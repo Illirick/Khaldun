@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hit_stick.mp3-1821fc863e7270ae69592841744ad76c.mp3str"
+
+[deps]
+
+source_file="res://sound/hit_stick.mp3"
+dest_files=[ "res://.import/hit_stick.mp3-1821fc863e7270ae69592841744ad76c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/egypt.mp3-9ca91508541cde5a2e816586c006a511.mp3str"
+
+[deps]
+
+source_file="res://sound/egypt.mp3"
+dest_files=[ "res://.import/egypt.mp3-9ca91508541cde5a2e816586c006a511.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
