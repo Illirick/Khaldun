@@ -1,14 +1,8 @@
 # Khaldun
 
-This is a game we made for Mythical Game Jam Satbayev University 2022 in a group of 5 people. Telegram links:
+This is a game we made for Mythical Game Jam Satbayev University 2022 in a group of 5 people.
 
-- Artist: @Hatokichan
-- Composer: @mamutoff
-- Team leader: @Weshiy_ogurec
-- ???: @Dipersun
-- Programmer: @krern (me)
-
-Note that this game is in the unfinished state as of right now and work is being done to finish it. Also, I might make a organisation account and move it there.
+Note that this game is in the unfinished state as of right now and work is being done to finish it.
 
 ## Controls
 
